@@ -1,5 +1,5 @@
 
-const Header = ({pageTitle}: {pageTitle: string}) => {
+const Header = ({pageTitle}) => {
     return (
       <header>
       <nav className="navigation">

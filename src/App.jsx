@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Header from './components/Header';
 import Home from './components/Home';
-import Test from './components/Test';
+import Vearbat from './components/quiz/Vearbat';
 
 import './App.css'
 
@@ -14,11 +14,11 @@ function App() {
       <>
         <Container>
           <Row>
-            <Header pageTitle="Sátniprográmma"/>
+            <Header pageTitle="Sátneprográmma"/>
           </Row>
           <Routes>
             <Route path = '/' element = {<Home/>} />
-            <Route path = '/test' element = {<Test/>} />
+            <Route path = '/vearbat' element = {<Vearbat/>} />
         </Routes>
         </Container>
       </>
