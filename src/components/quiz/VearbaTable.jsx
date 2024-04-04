@@ -4,7 +4,6 @@ const VearbaTable = ({vearbaTempus, vearbaType, vearbaEnd}) => {
         if (vearbaTempus === "preesens") {
             if(vearbaType === "parillis") {
                 if (vearbaEnd === "at") {
-                    console.log('wjat');
                     return (<div>1. mun verbin vartalo (HD) + n<br/>
                     2. don verbin vartalo (HD) + t<br/>
                     3. son verbin vartalo (GD) ei päätettä a:sta á<br/>

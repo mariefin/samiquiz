@@ -9,58 +9,58 @@ const VearbaHelper = ({satneLuohka, vearbaType, vearbaEnd}) => {
         switch(satneLuohka) {
             case "ol1pres":
                 vearbaTempus = "preesens";
-                return "Yksikön ensimmäinen preesens";
+                return "Mun _____ (preesens)";
             case "ol2pres":
                 vearbaTempus = "preesens";
-                return "Yksikön toinen preesens";
+                return "Don ______ (preesens)";
             case "ol3pres":
                 vearbaTempus = "preesens";
-                return "Yksikön kolmas preesens";
+                return "Son ______ (preesens)";
             case "gl1pres":
                 vearbaTempus = "preesens";
-                return "Kaksikon ensimmäinen preesens";
+                return "Moai ______ (preesens)";
             case "gl2pres":
                 vearbaTempus = "preesens";
-                return "Kaksikon toinen preesens";
+                return "Doai ______ (preesens)";
             case "gl3pres":
                 vearbaTempus = "preesens";
-                return "Kaksikon kolmas preesens";
+                return "Soai  ______ (preesens)";
             case "ml1pres":
                 vearbaTempus = "preesens";
-                return "Monikon ensimmäinen preesens";
+                return "Mii ______ (preesens)";
             case "ml2pres":
                 vearbaTempus = "preesens";
-                return "Monikon toinen preesens";
+                return "Dii ______ (preesens)";
             case "ml3pres":
                 vearbaTempus = "preesens";
-                return "Monikon kolmas preesens";
+                return "Sii ______ (preesens)";
             case "ol1pret":
                 vearbaTempus = "preteriti";
-                return "Yksikön ensimmäinen preteriti";
+                return "Mun ______ (preteriti)";
             case "ol2pret":
                 vearbaTempus = "preteriti";
-                return "Yksikön toinen preteriti";
+                return "Don ______ (preteriti)";
             case "ol3pret":
                 vearbaTempus = "preteriti";
-                return "Yksikön kolmas preteriti";
+                return "Son ______ (preteriti)";
             case "gl1pret":
                 vearbaTempus = "preteriti";
-                return "Kaksikon ensimmäinen preteriti";
+                return "Mun ______ (preteriti)";
             case "gl2pret":
                 vearbaTempus = "preteriti";
-                return "Kaksikon toinen preteriti";
+                return "Don ______ (preteriti)";
             case "gl3pret":
                 vearbaTempus = "preteriti";
-                return "Kaksikon kolmas preteriti";
+                return "Son ______ (preteriti)";
             case "ml1pret":
                 vearbaTempus = "preteriti";
-                return "Monikon ensimmäinen preteriti";
+                return "Mii ______ (preteriti)";
             case "ml2pret":
                 vearbaTempus = "preteriti";
-                return "Monikon toinen preteriti";
+                return "Dii ______ (preteriti)";
             case "ml3pret":
                 vearbaTempus = "preteriti";
-                return "Monikon kolmas preteriti";
+                return "Sii ______ (preteriti)";
             case "presKielto":
                 vearbaTempus = "preesens";
                 return "Preesensin kieltomuoto";
@@ -79,7 +79,7 @@ const VearbaHelper = ({satneLuohka, vearbaType, vearbaEnd}) => {
         <OverlayTrigger
             trigger="click"
             key="right"
-            placement="right"
+            placement="bottom"
             rootClose
             overlay={
                 <Popover id="popover-positioned-right">

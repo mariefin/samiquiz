@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Header from './components/Header';
 import Home from './components/Home';
 import Vearbat from './components/quiz/Vearbat';
+import Nomenat from './components/quiz/Nomenat';
 
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path = '/' element = {<Home/>} />
             <Route path = '/vearbat' element = {<Vearbat/>} />
+            <Route path = '/nomenat' element = {<Nomenat/>} />
         </Routes>
         </Container>
       </>
