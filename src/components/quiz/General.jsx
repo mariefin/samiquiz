@@ -8,7 +8,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Vearbat() {
     const location = useLocation();
-    console.log(location.state);
+    console.log(location);
     const randomSatneLuohka = () => {
         const satneLuohkat = ["ol1pres",
         "ol2pres",
@@ -51,9 +51,7 @@ function Vearbat() {
 
     useEffect(() => {
         axios.get('/satnis/vearba.json').then(response => {
-            const satnis = response.data;
-            console.log(satnis);
-            setSatnit(satnis);
+            setSatnit(response.data);
             setCurrentSatni(Math.floor(Math.random() * 3));
         });
     }, []);

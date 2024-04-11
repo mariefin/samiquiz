@@ -79,7 +79,7 @@ function Nomenat() {
     return (
       <>
         <Col>
-            <h2>Harjoitellaan substantiiveja!</h2>
+            <h2>Harjoitellaan nomineja!</h2>
             {showScore ? (
         <div>
             <h2>Harjoitus tehty!</h2>

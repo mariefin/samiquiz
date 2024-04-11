@@ -45,13 +45,13 @@ const VearbaHelper = ({satneLuohka, vearbaType, vearbaEnd}) => {
                 return "Son ______ (preteriti)";
             case "gl1pret":
                 vearbaTempus = "preteriti";
-                return "Mun ______ (preteriti)";
+                return "Moai ______ (preteriti)";
             case "gl2pret":
                 vearbaTempus = "preteriti";
-                return "Don ______ (preteriti)";
+                return "Doai ______ (preteriti)";
             case "gl3pret":
                 vearbaTempus = "preteriti";
-                return "Son ______ (preteriti)";
+                return "Soai ______ (preteriti)";
             case "ml1pret":
                 vearbaTempus = "preteriti";
                 return "Mii ______ (preteriti)";
