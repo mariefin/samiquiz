@@ -8,7 +8,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Nomenat() {
     const location = useLocation();
-    console.log(location);
     const randomSatneLuohka = () => {
         const satneLuohkat = ["olgen",
         "olill",
@@ -40,10 +39,19 @@ function Nomenat() {
 
     useEffect(() => {
         axios.get('/satnis/nomenat.json').then(response => {
-            setSatnit(response.data);
-            setCurrentSatni(Math.floor(Math.random() * 3));
+            let satnis = response.data;
+            if (location.state !== null) {
+                if (typeof location.state.type !== 'undefined') {
+                    satnis = satnis.filter((x)=> x.type === location.state.type);
+                } 
+                if (typeof location.state.teema !== 'undefined') {
+                    satnis = satnis.filter((x)=> x.teema === location.state.teema);
+                } 
+            }
+            setSatnit(satnis);
+            setCurrentSatni(Math.floor(Math.random() * satnis.length));
         });
-    }, []);
+    }, [location.state]);
     
     const handleAnswerSelection = (questionIndex, selectedAnswer) => {
         const updatedAnswers = [...answers];
@@ -108,6 +116,7 @@ function Nomenat() {
                     <div className="mt-2">Oikea vastaus: {satnit[currentSatni][satneLuohka]}<br/>
                     Vastaus: {answers[currentQuestion]} </div>
                 }
+                <div className="mt-4"><Link to="/" className="btn btn-danger me-2 mb-2">Alkuun</Link></div>
             </div>
             )}
         </Col>

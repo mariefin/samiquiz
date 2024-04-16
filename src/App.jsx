@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Vearbat from './components/quiz/Vearbat';
 import Nomenat from './components/quiz/Nomenat';
+import General from './components/quiz/General';
 
 import './App.css'
 
@@ -21,6 +22,7 @@ function App() {
             <Route path = '/' element = {<Home/>} />
             <Route path = '/vearbat' element = {<Vearbat/>} />
             <Route path = '/nomenat' element = {<Nomenat/>} />
+            <Route path = '/general' element = {<General/>} />
         </Routes>
         </Container>
       </>

@@ -8,7 +8,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Vearbat() {
     const location = useLocation();
-    console.log(location.state);
     const randomSatneLuohka = () => {
         const satneLuohkat = ["ol1pres",
         "ol2pres",
@@ -51,12 +50,19 @@ function Vearbat() {
 
     useEffect(() => {
         axios.get('/satnis/vearba.json').then(response => {
-            const satnis = response.data;
-            console.log(satnis);
+            let satnis = response.data;
+            if (location.state !== null) {
+                if (typeof location.state.type !== 'undefined') {
+                    satnis = satnis.filter((x)=> x.type === location.state.type);
+                } 
+                if (typeof location.state.vearba !== 'undefined') {
+                    satnis = satnis.filter((x)=> x.vearba === location.state.vearba);
+                }
+            }
             setSatnit(satnis);
-            setCurrentSatni(Math.floor(Math.random() * 3));
+            setCurrentSatni(Math.floor(Math.random() * satnis.length));
         });
-    }, []);
+    }, [location.state]);
     
     const handleAnswerSelection = (questionIndex, selectedAnswer) => {
         const updatedAnswers = [...answers];
@@ -121,6 +127,7 @@ function Vearbat() {
                     <div className="mt-2">Oikea vastaus: {satnit[currentSatni][satneLuohka]}<br/>
                     Vastaus: {answers[currentQuestion]} </div>
                 }
+                <div className="mt-4"><Link to="/" className="btn btn-danger me-2 mb-2">Alkuun</Link></div>
             </div>
             )}
         </Col>
