@@ -25,7 +25,7 @@ function General() {
 			let satnis = response.data;
 			if (location.state !== null) {
                 if (typeof location.state.teema !== 'undefined') {
-                    satnis = satnis.filter((x)=> x.type === location.state.teema);
+                    satnis = satnis.filter((x)=> x.teema === location.state.teema);
                 } 
             }
             setSatnit(satnis);
@@ -75,7 +75,7 @@ function General() {
         </div>
             ) : (
             <div>
-                <h2>Verbi {currentQuestion + 1}/{maxQuestions}</h2>
+                <h2>Sana {currentQuestion + 1}/{maxQuestions}</h2>
                 <h3>{satnit[currentSatni]['suomi']}</h3>
                 <div>
                 <input
