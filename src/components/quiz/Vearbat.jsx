@@ -108,9 +108,8 @@ function Vearbat() {
             ) : (
             <div>
                 <h2>Verbi {currentQuestion + 1}/{maxQuestions}</h2>
-                <h3>{satnit[currentSatni]['vearba']}</h3>
-                <h4>{satnit[currentSatni]['suomi']}</h4>
-                <VearbaHelper satneLuohka={satneLuohka} vearbaEnd={satnit[currentSatni]['ending']} vearbaType={satnit[currentSatni]['type']}/>
+                <h3>{satnit[currentSatni]['suomi']}</h3>
+                <VearbaHelper satneLuohka={satneLuohka} vearbaEnd={satnit[currentSatni]['ending']} vearbaType={satnit[currentSatni]['type']} vearba={satnit[currentSatni]['vearba']}/>
                 <div>
                 <input
                     type="text"

@@ -97,9 +97,9 @@ function Nomenat() {
             ) : (
             <div>
                 <h2>Verbi {currentQuestion + 1}/{maxQuestions}</h2>
-                <h3>{satnit[currentSatni]['nomena']}</h3>
-                <h4>{satnit[currentSatni]['suomi']}</h4>
-                <NomenaHelper satneLuohka={satneLuohka} nomenaEnd={satnit[currentSatni]['ending']} nomenaType={satnit[currentSatni]['type']}/>
+                <h3>{satnit[currentSatni]['suomi']}</h3>
+                <br/>
+                <NomenaHelper satneLuohka={satneLuohka} nomenaEnd={satnit[currentSatni]['ending']} nomenaType={satnit[currentSatni]['type']} nomena={satnit[currentSatni]['nomena']}/>
                 <div>
                 <input
                     type="text"
@@ -113,8 +113,8 @@ function Nomenat() {
                 <button onClick={checkSatni} className="btn btn-primary mt-4 me-4" disabled={checkQuestion}>Tarkista vastaus</button>
                 <button onClick={handleNextQuestion} className="btn btn-primary mt-4" disabled={nextQuestion}>Seuraava kysymys</button>
                 {showAnswer &&
-                    <div className="mt-2">Oikea vastaus: {satnit[currentSatni][satneLuohka]}<br/>
-                    Vastaus: {answers[currentQuestion]} </div>
+                    <div className="mt-2"><p>Oikea vastaus: {satnit[currentSatni][satneLuohka]}</p>
+                    <p>Vastaus: {answers[currentQuestion]} </p></div>
                 }
                 <div className="mt-4"><Link to="/" className="btn btn-danger me-2 mb-2">Alkuun</Link></div>
             </div>

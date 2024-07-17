@@ -3,7 +3,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import NomenaTable from "./NomenaTable";
 
-const VearbaHelper = ({satneLuohka, nomenaType, nomenaEnd}) => {
+const VearbaHelper = ({satneLuohka, nomenaType, nomenaEnd, nomena}) => {
     const renderSatneLuohka = (satneLuohka) => {
         switch(satneLuohka) {
             case "olgen":
@@ -40,7 +40,7 @@ const VearbaHelper = ({satneLuohka, nomenaType, nomenaEnd}) => {
             rootClose
             overlay={
                 <Popover id="popover-positioned-right">
-                <Popover.Header as="h3">{nomenaType}</Popover.Header>
+                <Popover.Header as="h3"><strong className="h3">{nomena}</strong><br/> {nomenaType}</Popover.Header>
                 <Popover.Body>
                     <NomenaTable nomenaEnd={nomenaEnd} nomenaType={nomenaType}/>
                 </Popover.Body>

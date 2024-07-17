@@ -3,7 +3,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import VearbaTable from "./VearbaTable";
 
-const VearbaHelper = ({satneLuohka, vearbaType, vearbaEnd}) => {
+const VearbaHelper = ({satneLuohka, vearbaType, vearbaEnd, vearba}) => {
     let vearbaTempus;    
     const renderSatneLuohka = (satneLuohka) => {
         switch(satneLuohka) {
@@ -83,7 +83,7 @@ const VearbaHelper = ({satneLuohka, vearbaType, vearbaEnd}) => {
             rootClose
             overlay={
                 <Popover id="popover-positioned-right">
-                <Popover.Header as="h3">{vearbaTempus} {vearbaType}</Popover.Header>
+                <Popover.Header as="h3"><strong className="h3">{vearba}</strong><br/>{vearbaTempus} {vearbaType}</Popover.Header>
                 <Popover.Body>
                     <VearbaTable vearbaEnd={vearbaEnd} vearbaTempus={vearbaTempus} vearbaType={vearbaType}/>
                 </Popover.Body>
